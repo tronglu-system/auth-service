@@ -1,0 +1,27 @@
+{
+  "name": "tl-authorization-service",
+  "version": "1.0.0",
+  "description": "Trong Lu Authorization Service",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node -r node_modules/dotenv/config -- src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Trong Lu",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^8.0.0",
+    "express": "^4.16.3",
+    "swagger-jsdoc": "^1.9.7",
+    "swagger-ui-express": "^3.0.8"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "nodemon": "^1.17.3"
+  }
+}
