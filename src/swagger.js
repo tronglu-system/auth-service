@@ -2,15 +2,16 @@ import swaggerJSDoc from 'swagger-jsdoc'
 
 const host = process.env.HOST
 const port = process.env.PORT
-const version = process.env.VERSION
+const documentVersion = process.env.DOCUMENT_VERSION
+const apiVersion = process.env.API_VERSION
 const swaggerDefinition = {
   info: {
     title: 'Authorization Service API',
-    version: version,
+    version: documentVersion,
     description: 'API Documentation for TL Authorization Service'
   },
   host: `${host}:${port}`,
-  basePath: '/',
+  basePath: `/api/v${apiVersion}`,
   produces: [
     'application/json'
   ],
