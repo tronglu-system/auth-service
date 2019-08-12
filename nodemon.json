@@ -1,0 +1,5 @@
+{
+  "ignore": [".git", ".vscode", "node_modules"],
+  "watch": ["src", "docs"],
+  "ext": "js,json,yaml"
+}
