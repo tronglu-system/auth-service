@@ -1,8 +1,13 @@
-version: '2.1'
+version: '3.7'
 
 services:
-  tl-authorization-service:
-    image: tl-authorization-service
+  backend:
+    image: lvhtrong.auth-service
+    env_file:
+      - .env
+      - .env.local
+      - .env.production
+      - .env.production.local
     build: .
     environment:
       NODE_ENV: production
