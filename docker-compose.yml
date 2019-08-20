@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   backend:
-    image: lvhtrong.auth-service
+    image: lvhtrong.auth-service:${VERSION}
     env_file:
       - .env
       - .env.local
@@ -12,4 +12,4 @@ services:
     environment:
       NODE_ENV: production
     ports:
-      - 3000:3000
+      - ${PORT}:${PORT}

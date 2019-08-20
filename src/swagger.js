@@ -2,7 +2,7 @@ import swaggerJSDoc from 'swagger-jsdoc'
 
 const host = process.env.HOST
 const port = process.env.PORT
-const documentVersion = process.env.DOCUMENT_VERSION
+const documentVersion = process.env.VERSION
 const apiVersion = process.env.API_VERSION
 const swaggerDefinition = {
   info: {
