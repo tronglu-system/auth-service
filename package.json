@@ -1,5 +1,5 @@
 {
-  "name": "tl-authorization-service",
+  "name": "auth-service",
   "version": "1.0.0",
   "description": "Trong Lu Authorization Service",
   "main": "index.js",
