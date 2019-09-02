@@ -1,6 +1,9 @@
 import express from 'express'
 import swaggerUi from 'swagger-ui-express'
 import swaggerSpec from './swagger'
+import mongo from './mongo'
+
+mongo.setup()
 
 const app = express()
 
