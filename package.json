@@ -7,7 +7,7 @@
     "dev": "nodemon --exec babel-node -r node_modules/dotenv-flow/config -- src/server.js",
     "build": "babel src -d lib ",
     "prod": "node lib/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Trong Lu",
   "license": "ISC",
@@ -24,12 +24,15 @@
     "@babel/core": "^7.5.5",
     "@babel/node": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "babel-jest": "^24.9.0",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.16.0",
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
+    "jest": "^24.9.0",
     "nodemon": "^1.17.3"
   }
 }
