@@ -5,4 +5,5 @@ jobs:
   include:
     - stage: prebuild
       script: yarn lint
+    - stage: prebuild
       script: yarn test
