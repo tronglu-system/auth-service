@@ -5,9 +5,7 @@ services:
     image: tronglu.auth-service:${VERSION}
     env_file:
       - .env
-      - .env.local
       - .env.production
-      - .env.production.local
     build: .
     environment:
       NODE_ENV: production
