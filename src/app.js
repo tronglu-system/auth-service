@@ -1,17 +1,9 @@
 import express from 'express'
-import swaggerUi from 'swagger-ui-express'
-import swaggerSpec from './swagger'
-import mongo from './mongo'
 
-mongo.setup()
+import apiRoute from './api'
 
 const app = express()
 
-app.get('/api-docs.json', function (req, res) {
-  res.setHeader('Content-Type', 'application/json')
-  res.send(swaggerSpec)
-})
-
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
+app.use('/api', apiRoute)
 
 export default app
