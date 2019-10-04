@@ -14,4 +14,8 @@ router.get('/docs.json', function (req, res) {
 
 router.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
 
+router.get('/status', function (req, res) {
+  res.send('OK')
+})
+
 export default router

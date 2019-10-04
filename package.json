@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "nodemon --exec babel-node -r node_modules/dotenv-flow/config -- src/server.js",
     "build": "babel src -d lib ",
-    "prod": "node lib/server.js",
-    "test": "jest"
+    "prod": "node -r ./node_modules/dotenv-flow/config lib/server.js",
+    "test": "jest",
+    "heroku:build": "heroku container:push web -a tronglu-auth-service",
+    "heroku:release": "heroku container:release web -a tronglu-auth-service"
   },
   "author": "Trong Lu",
   "license": "ISC",
