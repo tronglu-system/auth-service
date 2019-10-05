@@ -6,7 +6,7 @@ RUN yarn && yarn build
 FROM node:8.16.1-alpine
 ENV NODE_ENV production
 WORKDIR /usr/src/app/tronglu-auth-service
-COPY ["package.json", "yarn.lock", ".env", ".env.production", "./"]
+COPY ["package.json", "yarn.lock", "./"]
 RUN yarn --prod
 COPY --from=transpiler /usr/src/app/tronglu-auth-service/lib ./lib
 COPY --from=transpiler /usr/src/app/tronglu-auth-service/docs ./docs
