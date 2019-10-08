@@ -1,11 +1,9 @@
 import { connect } from 'mongoose'
 
 const setup = () => {
-  const dbHost = process.env.MONGO_URL
-  const dbPort = process.env.MONGO_PORT
-  const dbName = process.env.MONGO_DB_NAME
+  const dbUri = process.env.MONGO_URI
   connect(
-    `mongodb://${dbHost}:${dbPort}/${dbName}`,
+    dbUri,
     {
       useNewUrlParser: true
     }
