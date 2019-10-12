@@ -1,0 +1,43 @@
+openapi: 3.0.1
+info:
+  title: Auth Service API
+  description: API Documentation for TL Auth Service
+  version: 1.0.0
+servers:
+  - url: 'http://localhost/api/v1'
+paths:
+  /auth/token:
+    post:
+      tags:
+        - auth
+      summary: Login and get access token
+      description: Login and get access token
+      requestBody:
+        description: body
+        content:
+          '*/*':
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                  example: username
+                password:
+                  type: string
+                  example: password
+        required: true
+      responses:
+        200:
+          description: Login succeed
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token:
+                    type: string
+                    example: token
+components: {}
+tags:
+  - name: auth
+    description: Auth
